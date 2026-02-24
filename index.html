@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio | João Pedro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <div class="perfil">
+                <div class="avatar-placeholder">JP</div> 
+                <h1>João Pedro</h1>
+                <p>Dev. Fullstack em Formação</p>
+                <p class="status">📍 Taboão da Serra, SP</p>
+            </div>
+            
+            <nav class="menu">
+                <button onclick="mostrarSecao('projetos')">Meus Projetos</button>
+                <button onclick="mostrarSecao('sobre')">Sobre Mim</button>
+                <button onclick="mostrarSecao('contato')">Contato</button>
+                
+                <a href="https://github.com/Joaopedro1702" target="_blank" class="link-externo">
+                    <button style="border-color: #00ff88; color: #00ff88;">
+                        🐙 Acessar GitHub
+                    </button>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="conteudo">
+            
+            <section id="projetos" class="secao">
+                
+                <div id="lista-cards">
+                    <h2>Meus Trabalhos Recentes</h2>
+                    <div class="grid-projetos">
+
+                        <div class="card" onclick="abrirDetalhe('yara')">
+                            <div class="card-capa" style="background-image: url('img/projeto-site.png');"></div>
+                            <div class="card-info">
+                                <h3>Bot Yara</h3>
+                                <p>Automação com IA e Python</p>
+                                <span class="btn-ver">Ver Detalhes &rarr;</span>
+                            </div>
+                        </div>
+
+                        <div class="card" onclick="abrirDetalhe('transportadora')">
+                            <div class="card-capa" style="background-image: url('img/transportadora-site.png');"></div>
+                            <div class="card-info">
+                                <h3>Transportadora</h3>
+                                <p>Sistema de Gestão em Java</p>
+                                <span class="btn-ver">Ver Detalhes &rarr;</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="detalhe-yara" class="painel-detalhe" style="display:none;">
+                    <button class="btn-voltar" onclick="fecharDetalhe()">&#8592; Voltar</button>
+                    <div class="layout-lado-a-lado">
+                        <div class="coluna-img">
+                            <img src="img/projeto-site.png" alt="Bot Yara">
+                        </div>
+                        <div class="coluna-texto">
+                            <h2>Bot Yara</h2>
+                            <p class="tag">Python &bull; IA &bull; Acessibilidade</p>
+                            <h3>Sobre o Projeto</h3>
+                            <p>Assistente virtual que integra a API da Groq (Llama 3) com Edge-TTS para minha assistente pra tirar dúvidas (em desenvolvimento).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="detalhe-transportadora" class="painel-detalhe" style="display:none;">
+                    <button class="btn-voltar" onclick="fecharDetalhe()">&#8592; Voltar</button>
+                    <div class="layout-lado-a-lado">
+                        <div class="coluna-img">
+                            <img src="img/transportadora.png" alt="Sistema Java">
+                        </div>
+                        <div class="coluna-texto">
+                            <h2>Sistema de Transportadora</h2>
+                            <p class="tag">Java &bull; NetBeans &bull; SQL Server</p>
+                            <h3>Sobre o Projeto</h3>
+                            <p>Sistema completo de gestão de frotas, controle de motoristas e entregas desenvolvido durante o curso técnico no SENAC.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="sobre" class="secao" style="display:none;">
+                <h2>Sobre Mim</h2>
+                <p>Tenho 23 anos, moro em Taboão da Serra-SP e curso Análise e Desenvolvimento de Sistemas (Superior) e Dev. de Sistemas (Técnico) no SENAC. Com foco estratégico em Java, busco especialização profunda na linguagem para construir soluções robustas. Possuo sólidos conhecimentos intermediários em Python e SQL, unindo base acadêmica e prática técnica para evoluir no ecossistema de software e contribuir em projetos desafiadores.</p>
+            </section>
+
+            <section id="contato" class="secao" style="display:none;">
+                <h2>Contato</h2>
+                <p>Email: joaodev.str@gmail.com</p>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        function mostrarSecao(id) {
+            document.querySelectorAll('.secao').forEach(s => s.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+        function abrirDetalhe(id) {
+            document.getElementById('lista-cards').style.display = 'none';
+            document.getElementById('detalhe-' + id).style.display = 'block';
+        }
+        function fecharDetalhe() {
+            document.querySelectorAll('.painel-detalhe').forEach(p => p.style.display = 'none');
+            document.getElementById('lista-cards').style.display = 'block';
+        }
+    </script>
+</body>
+</html>  </script>
+
+</body> 
+</html>

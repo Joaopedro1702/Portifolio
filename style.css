@@ -25,18 +25,34 @@ body {
     border-right: 1px solid #333;
 }
 
+.imagem{
+    width: 80px; /*Aqui vai ser definido um tamanho fixo*/
+    height: 80px; /*Mantém quadrado para um circulo perfeito*/
+    border: 2px solid #20c997; /*Borda verde claro*/
+    border-radius: 50%; /*Transforma o quadrado em circulo*/
+    overflow: hidden; /*Esconde o que estiver fora do circulo*/ 
+    margin: 0 auto 15px; /*Centraliza na sidebar e dá espaço abaixo*/
+    position: relative;/*Necessário para o texto placeholder*/
+    background-color: #333;/*cor de fundo caso a imagem falhe*/
+    display: flex; /*ajuda a centralizar a imagem dentro*/
+    align-items: center;/*centraliza verticalmente*/
+    justify-content: center;/*centraliza horizontalmente*/
+}
+
+.imagem img{
+    width: 100%; /*A imagem vai ocupar todo o circulo*/
+    height: 100%; /*A imagem ocupa toda altura do circulo*/
+    object-fit: cover; /*Preenche o circulo mantendo a proporção*/
+    object-position: center; /*centraliza o rosto na moldura*/
+    display: block;
+}
+
 .avatar-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: #333;
-    border-radius: 50%;
-    margin: 0 auto 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: #00ff88;
-    border: 2px solid #00ff88;
+  position: absolute;     /* Posicionamento sobre a imagem */
+  font-size: 2rem;
+  color: #20c997;
+  font-weight: bold;
+  z-index: 1;             /* Fica abaixo da imagem se ela carregar */
 }
 
 .sidebar h1 { font-size: 1.5rem; text-align: center; color: #fff; margin-bottom: 5px; }
